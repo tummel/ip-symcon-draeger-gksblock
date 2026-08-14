@@ -1,0 +1,136 @@
+{
+    "elements": [
+        {
+            "type": "ExpansionPanel",
+            "caption": "Gaszuordnung",
+            "items": [
+                {
+                    "type": "ValidationTextBox",
+                    "name": "GasSymbol",
+                    "caption": "Gas-Symbol (z. B. H2_40, AR, N2O2)"
+                },
+                {
+                    "type": "ValidationTextBox",
+                    "name": "GasName",
+                    "caption": "Gas-Klartextbezeichnung (Deutsch)"
+                },
+                {
+                    "type": "ValidationTextBox",
+                    "name": "GasNameEn",
+                    "caption": "Gas-Klartextbezeichnung (Englisch)"
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Netzdruck",
+            "items": [
+                {
+                    "type": "SelectVariable",
+                    "name": "NetworkPressureVariableID",
+                    "caption": "Externe Netzdruck-Messwertvariable (optional)"
+                },
+                {
+                    "type": "Label",
+                    "caption": "Wird hier keine Variable verknüpft, simuliert das Modul den Netzdruck selbst (Füllrate s. u.) - praktisch zum Testen ohne echten Sensor."
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Ausgänge zu echten Magnetventilen (optional)",
+            "items": [
+                {
+                    "type": "Label",
+                    "caption": "Werden hier Variablen verknüpft, schaltet das Modul beim Öffnen/Schließen zusätzlich die jeweilige reale Ausgangsvariable (z. B. Relaisausgang eines I/O-Moduls) per RequestAction mit."
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "OutputVariableID_V1",
+                    "caption": "Ausgang V1 (Nebenventil)"
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "OutputVariableID_V2",
+                    "caption": "Ausgang V2 (Hauptventil)"
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "OutputVariableID_V3",
+                    "caption": "Ausgang V3 (Bypassventil)"
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Prüfsequenz-Parameter",
+            "items": [
+                {
+                    "type": "NumberSpinner",
+                    "name": "Fill1Target",
+                    "caption": "Ziel Netzfüllung 1 (bar)",
+                    "digits": 1
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "Test1Duration",
+                    "caption": "Prüfzeit 1 (Sekunden)"
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "Fill2Target",
+                    "caption": "Ziel Netzfüllung 2 (bar)",
+                    "digits": 1
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "Test2Duration",
+                    "caption": "Prüfzeit 2 (Sekunden)"
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "FillRate",
+                    "caption": "Füllrate Simulation (bar/Sekunde, nur ohne externe Druckvariable)",
+                    "digits": 2
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Label",
+            "caption": "Aktueller Zustand"
+        },
+        {
+            "type": "RowLayout",
+            "items": [
+                {
+                    "type": "Button",
+                    "caption": "Freigabe GKS",
+                    "onClick": "GKSB_Freigeben($id);"
+                },
+                {
+                    "type": "Button",
+                    "caption": "Sperre GKS",
+                    "onClick": "GKSB_Sperren($id);"
+                }
+            ]
+        },
+        {
+            "type": "Label",
+            "caption": "Betriebsart je Ventil (Automatik/Hand) und Status werden als Statusvariablen dieser Instanz angelegt und können im WebFront direkt geschaltet werden (Kachel der Instanz -> Visualisierung)."
+        }
+    ],
+    "status": [
+        {
+            "code": 201,
+            "icon": "error",
+            "caption": "Gas-Symbol nicht konfiguriert."
+        },
+        {
+            "code": 102,
+            "icon": "active",
+            "caption": "GKS-Block aktiv."
+        }
+    ]
+}
