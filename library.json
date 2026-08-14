@@ -1,8 +1,9 @@
 {
     "id": "{03D5C1BD-07F8-4AF6-ADA0-7437AF8D3301}",
-    "name": "Burghausen GKS-Block",
     "author": "Rainer",
+    "name": "Burghausen GKS-Block",
     "url": "",
-    "license": "privat / intern",
-    "version": "1.0"
+    "version": "1.0",
+    "build": 1,
+    "date": 1786700485
 }
