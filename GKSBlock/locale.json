@@ -1,0 +1,31 @@
+{
+    "translations": {
+        "de": {},
+        "en": {
+            "Gaszuordnung": "Gas assignment",
+            "Gas-Symbol (z. B. H2_40, AR, N2O2)": "Gas symbol (e.g. H2_40, AR, N2O2)",
+            "Gas-Klartextbezeichnung (Deutsch)": "Gas full name (German)",
+            "Gas-Klartextbezeichnung (Englisch)": "Gas full name (English)",
+            "Netzdruck": "Network pressure",
+            "Externe Netzdruck-Messwertvariable (optional)": "External network pressure sensor variable (optional)",
+            "Wird hier keine Variable verknüpft, simuliert das Modul den Netzdruck selbst (Füllrate s. u.) - praktisch zum Testen ohne echten Sensor.": "If no variable is linked here, the module simulates the network pressure itself (fill rate below) - useful for testing without real hardware.",
+            "Ausgänge zu echten Magnetventilen (optional)": "Outputs to real solenoid valves (optional)",
+            "Werden hier Variablen verknüpft, schaltet das Modul beim Öffnen/Schließen zusätzlich die jeweilige reale Ausgangsvariable (z. B. Relaisausgang eines I/O-Moduls) per RequestAction mit.": "If variables are linked here, the module also switches the corresponding real output variable (e.g. relay output of an I/O module) via RequestAction whenever it opens/closes a valve.",
+            "Ausgang V1 (Nebenventil)": "Output V1 (secondary valve)",
+            "Ausgang V2 (Hauptventil)": "Output V2 (main valve)",
+            "Ausgang V3 (Bypassventil)": "Output V3 (bypass valve)",
+            "Prüfsequenz-Parameter": "Test sequence parameters",
+            "Ziel Netzfüllung 1 (bar)": "Fill target 1 (bar)",
+            "Prüfzeit 1 (Sekunden)": "Test time 1 (seconds)",
+            "Ziel Netzfüllung 2 (bar)": "Fill target 2 (bar)",
+            "Prüfzeit 2 (Sekunden)": "Test time 2 (seconds)",
+            "Füllrate Simulation (bar/Sekunde, nur ohne externe Druckvariable)": "Simulated fill rate (bar/second, only used without an external pressure variable)",
+            "Aktueller Zustand": "Current state",
+            "Freigabe GKS": "Release GKS",
+            "Sperre GKS": "Lock GKS",
+            "Betriebsart je Ventil (Automatik/Hand) und Status werden als Statusvariablen dieser Instanz angelegt und können im WebFront direkt geschaltet werden (Kachel der Instanz -> Visualisierung).": "Operating mode per valve (automatic/manual) and status are created as status variables of this instance and can be switched directly in WebFront (instance tile -> visualization).",
+            "Gas-Symbol nicht konfiguriert.": "Gas symbol not configured.",
+            "Bitte Konfiguration abschließen (Übernehmen).": "Please complete configuration (Apply)."
+        }
+    }
+}
